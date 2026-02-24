@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRACOM | Electro-Mechanical Co.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f4f6f9;
+    color:#1e293b;
+    transition:0.3s;
+}
+
+body.ar{
+    direction:rtl;
+    font-family:'Cairo', sans-serif;
+}
+
+header{
+    background:#0f172a;
+    color:#fff;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:22px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:14px;
+}
+
+body.ar nav a{
+    margin-left:0;
+    margin-right:20px;
+}
+
+.lang-btn{
+    background:#f59e0b;
+    border:none;
+    padding:8px 15px;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.85)),
+    url("logo-pg.png") center/contain no-repeat;
+    background-color:#0f172a;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+}
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    font-size:32px;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.service-box{
+    background:#fff;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.team{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.member{
+    background:#fff;
+    padding:25px;
+    border-radius:8px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+footer{
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+    padding:40px 8%;
+}
+
+@media(max-width:768px){
+    .grid-2{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>BRACOM</h1>
+    <nav>
+        <a href="#about" data-en="About" data-ar="عن الشركة">About</a>
+        <a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
+        <a href="#team" data-en="Team" data-ar="الإدارة">Team</a>
+        <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+    </nav>
+    <button class="lang-btn" onclick="toggleLang()">AR</button>
+</header>
+
+<section class="hero">
+    <h2 data-en="Engineering the Future"
+        data-ar="نُهندس المستقبل">Engineering the Future</h2>
+    <p data-en="Delivering integrated Mechanical, Electrical and Plumbing solutions across Libya."
+       data-ar="تقديم حلول ميكانيكية وكهربائية وصحية متكاملة في جميع أنحاء ليبيا.">
+       Delivering integrated Mechanical, Electrical and Plumbing solutions across Libya.
+    </p>
+</section>
+
+<section id="about">
+    <h2 class="section-title"
+        data-en="Company Overview"
+        data-ar="نبذة عن الشركة">Company Overview</h2>
+
+    <div class="card"
+        data-en="BRACOM Electro-Mechanical Company provides integrated MEP solutions aligned with international standards, ensuring efficiency, reliability and long-term performance."
+        data-ar="شركة براكم للأعمال الكهروميكانيكية تقدم حلولاً متكاملة للأعمال الميكانيكية والكهربائية والصحية وفق المعايير الدولية لضمان الكفاءة والاعتمادية والأداء طويل الأمد.">
+        BRACOM Electro-Mechanical Company provides integrated MEP solutions aligned with international standards, ensuring efficiency, reliability and long-term performance.
+    </div>
+</section>
+
+<section id="services">
+    <h2 class="section-title"
+        data-en="Our MEP Services"
+        data-ar="خدماتنا">Our MEP Services</h2>
+
+    <div class="services">
+        <div class="service-box"
+            data-en="<strong>Mechanical Works</strong><br>HVAC systems<br>Firefighting systems<br>Ventilation systems"
+            data-ar="<strong>الأعمال الميكانيكية</strong><br>أنظمة التكييف<br>أنظمة مكافحة الحريق<br>أنظمة التهوية">
+            <strong>Mechanical Works</strong><br>
+            HVAC systems<br>
+            Firefighting systems<br>
+            Ventilation systems
+        </div>
+
+        <div class="service-box"
+            data-en="<strong>Electrical Works</strong><br>Power distribution<br>Lighting systems<br>Solar panels"
+            data-ar="<strong>الأعمال الكهربائية</strong><br>أنظمة توزيع الطاقة<br>أنظمة الإنارة<br>أنظمة الطاقة الشمسية">
+            <strong>Electrical Works</strong><br>
+            Power distribution<br>
+            Lighting systems<br>
+            Solar panels
+        </div>
+
+        <div class="service-box"
+            data-en="<strong>Plumbing Works</strong><br>Water supply<br>Drainage systems<br>Pump rooms"
+            data-ar="<strong>الأعمال الصحية</strong><br>أنظمة المياه<br>أنظمة الصرف<br>غرف المضخات">
+            <strong>Plumbing Works</strong><br>
+            Water supply<br>
+            Drainage systems<br>
+            Pump rooms
+        </div>
+    </div>
+</section>
+
+<section id="team">
+    <h2 class="section-title"
+        data-en="Leadership Team"
+        data-ar="فريق الإدارة">Leadership Team</h2>
+
+    <div class="team">
+        <div class="member">
+            <h3>Mohamed Nagim</h3>
+            <p data-en="CEO & Founder"
+               data-ar="الرئيس التنفيذي والمؤسس">CEO & Founder</p>
+        </div>
+
+        <div class="member">
+            <h3>Hani Alamami</h3>
+            <p data-en="Technical Director"
+               data-ar="المدير الفني">Technical Director</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <h3 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h3>
+    <p>+218 91 41 22 666</p>
+    <p>www.bracom.ly</p>
+    <p data-en="Benghazi - Libya"
+       data-ar="بنغازي - ليبيا">Benghazi - Libya</p>
+</footer>
+
+<script>
+let currentLang = "en";
+
+function toggleLang(){
+    const elements = document.querySelectorAll("[data-en]");
+    const btn = document.querySelector(".lang-btn");
+
+    if(currentLang === "en"){
+        elements.forEach(el=>{
+            el.innerHTML = el.getAttribute("data-ar");
+        });
+        document.body.classList.add("ar");
+        btn.innerText = "EN";
+        currentLang = "ar";
+    } else {
+        elements.forEach(el=>{
+            el.innerHTML = el.getAttribute("data-en");
+        });
+        document.body.classList.remove("ar");
+        btn.innerText = "AR";
+        currentLang = "en";
+    }
+}
+</script>
+
+</body>
+</html>
